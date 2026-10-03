@@ -1,0 +1,40 @@
+# LangGraph orchestration and SQLite checkpoint persistence
+langgraph==1.2.12
+langgraph-checkpoint-sqlite==3.1.1
+
+# LangChain core and model integrations used by src/nodes.py
+langchain-core==1.6.4
+langchain-google-genai==4.4.0
+langchain-openai==1.6.3
+langchain-ollama==1.1.0
+
+# Retrieval-augmented generation & Local Embeddings (src/tools/rag_tools.py, scripts/build_rag.py)
+langchain-chroma==1.1.0
+langchain-text-splitters==1.1.2
+chromadb==1.5.9
+onnxruntime==1.30.0
+tokenizers==0.23.2
+numpy==2.4.6
+
+# Gemini Vision client (src/tools/vision_tools.py)
+google-genai==2.25.0
+pillow==12.3.0
+
+# Live Database integration (src/tools/database_tools.py)
+psycopg2-binary==2.9.13
+
+# File, spreadsheet, PDF, OCR, network, and Telegram interfaces
+pandas==3.0.6
+openpyxl==3.1.5
+pymupdf==1.26.5
+pypdf==6.1.3
+rapidocr-onnxruntime==1.4.4
+requests==2.34.2
+python-dotenv==1.2.3
+python-telegram-bot==22.8
+playwright==1.63.0
+tqdm==4.70.1
+
+# Testing & verification
+pytest==9.1.1
+

@@ -1,0 +1,148 @@
+# ====================================================================
+# Peter - AI Coding Agent & Backend (.gitignore)
+# Supporting both Python (Backend/AI) and Kotlin (Android/PeterApp)
+# ====================================================================
+
+# --------------------------------------------------------------------
+# 1. Environment & Sensitive Credentials (NEVER commit secrets)
+# --------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+secrets.json
+*.pem
+*.key
+*.cert
+*.crt
+serviceAccountKey.json
+google-services.json
+
+# --------------------------------------------------------------------
+# 2. Large AI Models, Weights & Checkpoints (Prevents GitHub 100MB limit block)
+# --------------------------------------------------------------------
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+*.tflite
+models/
+qwen*.gguf
+
+# --------------------------------------------------------------------
+# 3. Local Runtime Databases, Vector Stores & Dumps
+# --------------------------------------------------------------------
+data/chroma_db/
+data/vector_store/
+data/sqlite/
+data/logs/
+data/finetune/
+*.sqlite3
+*.sqlite
+*.db
+*.dump
+*.sql
+
+# Database table dumps (protects PII, passwords, bank & KYC records)
+data/csv_files/*_2026*.csv
+data/*.sql
+data/*.xlsx
+data/csv_files/*.xlsx
+~$*
+
+# Keep documentation inside data folder
+!data/csv_files/ARYASHAKTI_PROJECT_OVERVIEW.md
+!data/csv_files/Project level KT - AryaShakti.csv
+
+# --------------------------------------------------------------------
+# 4. Python Bytecode, Compilations & Virtual Environments
+# --------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# --------------------------------------------------------------------
+# 5. Testing, Linting & Tool Caches
+# --------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# --------------------------------------------------------------------
+# 6. Jupyter Notebooks
+# --------------------------------------------------------------------
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --------------------------------------------------------------------
+# 7. Kotlin / Android Mobile App (peterApp)
+# --------------------------------------------------------------------
+.gradle/
+**/build/
+local.properties
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+.cxx/
+captures/
+*.jks
+*.keystore
+signing.properties
+
+# --------------------------------------------------------------------
+# 8. IDEs, Editors & Project Files
+# --------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+.idea/caches/
+
+# --------------------------------------------------------------------
+# 9. Logs & Operating System Files
+# --------------------------------------------------------------------
+*.log
+logs/
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
